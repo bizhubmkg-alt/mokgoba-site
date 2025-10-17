@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Printing & Design",
+    "description": "High-quality printing, posters, flyers, business cards, banners and branding design.",
+    "price": 150,
+    "image": "svc_mokgoba.jpg",
+    "category": "Mokgoba Biz Hub"
+  },
+  {
+    "id": 2,
+    "title": "Computer Repairs & IT Support",
+    "description": "Software installation, maintenance, upgrades, OS install and device troubleshooting.",
+    "price": 250,
+    "image": "svc_mokgoba.jpg",
+    "category": "Mokgoba Biz Hub"
+  },
+  {
+    "id": 3,
+    "title": "Construction & Maintenance",
+    "description": "General building, civil works, renovations, and maintenance services by Ithemba Lokwakha Group.",
+    "price": 5000,
+    "image": "svc_ithemba.jpg",
+    "category": "Ithemba Lokwakha Group"
+  },
+  {
+    "id": 4,
+    "title": "Payroll, Cleaning & Security",
+    "description": "Payroll services, cleaning contracts and security services for businesses and institutions.",
+    "price": 3000,
+    "image": "svc_ithemba.jpg",
+    "category": "Ithemba Lokwakha Group"
+  }
+]

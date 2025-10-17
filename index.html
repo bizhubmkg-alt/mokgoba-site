@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mokgoba Biz Hub — Ithemba Lokwakha Group</title>
+  <meta name="description" content="Mokgoba Biz Hub & Ithemba Lokwakha Group - services, contact and bot." />
+  <link rel="icon" href="/images/logo.png" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js" defer></script>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="brand">
+      <img src="/images/logo.png" alt="logo" class="brand-logo"/>
+      <div>
+        <div class="brand-name">Mokgoba Biz Hub</div>
+        <div class="brand-sub">Ithemba Lokwakha Group</div>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#profiles">Profiles</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a id="nav-whatsapp" href="#" target="_blank">WhatsApp</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <h1 class="hero-title">Mokgoba Biz Hub</h1>
+        <p class="hero-sub">Run by <strong>Ithemba Lokwakha Group</strong> — printing, IT, construction and business services.</p>
+        <div class="hero-actions">
+          <a href="#services" class="btn btn-primary">Our Services</a>
+          <a href="#contact" class="btn btn-ghost">Contact Us</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="/images/hero.jpg" alt="hero" />
+      </div>
+    </section>
+
+    <section id="services" class="section section-services">
+      <h2 class="section-title">Services</h2>
+      <p class="section-lead">Explore services provided by Mokgoba Biz Hub and Ithemba Lokwakha Group.</p>
+      <div id="servicesGrid" class="grid"></div>
+    </section>
+
+    <section id="about" class="section section-about">
+      <h2 class="section-title">About</h2>
+      <div class="about-grid">
+        <div>
+          <h3>Mokgoba Biz Hub</h3>
+          <p>Mokgoba Business and Print Hub is a proudly South African, 100% black-owned company providing printing, design, stationery and business support services. Contact: 066 062 7939 / 073 958 5861.</p>
+          <h3>Ithemba Lokwakha Group</h3>
+          <p>Ithemba Lokwakha Group is a multidisciplinary enterprise specializing in construction, payroll, cleaning and security services. Our mission is community empowerment and quality service delivery.</p>
+        </div>
+        <div class="about-card">
+          <h3>What you can do</h3>
+          <ol>
+            <li>Browse services and prices</li>
+            <li>Ask the web bot questions about either company</li>
+            <li>Place orders or enquiries</li>
+            <li>Download company profiles (PDF)</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="profiles" class="section">
+      <h2 class="section-title">Download Company Profiles</h2>
+      <p class="section-lead">Click to download the official company profiles (PDF).</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Mokgoba Biz Hub — Company Profile</h3>
+          <p>Printing, design, branding and business support. Reg: 2025/456824/07</p>
+          <a class="btn btn-primary" href="/files/Mokgoba_BizHub_Company_Profile.pdf" download>Download Mokgoba Profile (PDF)</a>
+        </div>
+        <div class="card">
+          <h3>Ithemba Lokwakha Group — Company Profile</h3>
+          <p>Construction, payroll, cleaning & security services.</p>
+          <a class="btn btn-primary" href="/files/Ithemba_Lokwakha_Group_Profile.pdf" download>Download Ithemba Profile (PDF)</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-contact">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-grid">
+        <div>
+          <h3>Reach out</h3>
+          <p>Phone: <a id="phoneLink" href="tel:0660627939">066 062 7939</a></p>
+          <p>Email: <a id="emailLink" href="mailto:bizhubmkg@gmail.com">bizhubmkg@gmail.com</a></p>
+          <p>Address: Mokgoba Biz Hub, Mokgoba Business Centre, Benoni, Gauteng</p>
+          <p><a id="whatsLinkFull" href="#" target="_blank">Chat on WhatsApp</a></p>
+        </div>
+        <div>
+          <h3>Send an order / enquiry</h3>
+          <form id="orderForm" class="order-form">
+            <input name="customerName" placeholder="Your name" required />
+            <input name="customerPhone" placeholder="Phone / WhatsApp" required />
+            <select name="serviceId" id="orderServiceSelect"></select>
+            <textarea name="notes" rows="4" placeholder="Any notes / pickup time"></textarea>
+            <button type="submit" class="btn btn-primary">Place Order</button>
+          </form>
+          <div id="orderResult" class="order-result" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="botPanel" class="bot-panel">
+    <div class="bot-header">
+      <div>
+        <strong>Mokgoba Bot</strong>
+        <div class="bot-sub">Ask about services, prices or order.</div>
+      </div>
+      <button id="botToggle" class="bot-close">✕</button>
+    </div>
+    <div id="botMessages" class="bot-messages">
+      <div class="bot-message bot-welcome">Hello! Type "menu" to view services, or ask a question like "price printing".</div>
+    </div>
+    <form id="botForm" class="bot-form">
+      <input id="botInput" placeholder="Ask a question or type 'menu'..." autocomplete="off" />
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </div>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
