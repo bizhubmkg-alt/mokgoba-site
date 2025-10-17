@@ -1,0 +1,54 @@
+{
+  "mokgoba": [
+    {
+      "name": "Printing & Copying",
+      "description": "High-quality prints, posters, flyers, and business cards."
+    },
+    {
+      "name": "Computer Repairs & IT Support",
+      "description": "Software installation, maintenance, and upgrades."
+    },
+    {
+      "name": "Business Registration & Support",
+      "description": "CIPC registration, BEE certificates, and compliance documentation."
+    },
+    {
+      "name": "Design & Branding",
+      "description": "Logos, CVs, invitations, signage, and promotional material."
+    },
+    {
+      "name": "Stationery & Office Supplies",
+      "description": "Bulk office essentials for your business."
+    },
+    {
+      "name": "Laminating & Binding",
+      "description": "Professional document finishing and presentation."
+    },
+    {
+      "name": "Photo Printing",
+      "description": "ID photos and full-color prints for all purposes."
+    }
+  ],
+  "ithemba": [
+    {
+      "name": "Construction Services",
+      "description": "General building, renovations, road works, and civil projects."
+    },
+    {
+      "name": "Cleaning Services",
+      "description": "Professional cleaning for offices, homes, and facilities."
+    },
+    {
+      "name": "Payroll Management",
+      "description": "Payroll and employee payment solutions for companies."
+    },
+    {
+      "name": "Security Services",
+      "description": "Physical and digital security solutions for homes and businesses."
+    },
+    {
+      "name": "Social Investment Initiatives",
+      "description": "Youth training, mental health programs, and community projects."
+    }
+  ]
+}
