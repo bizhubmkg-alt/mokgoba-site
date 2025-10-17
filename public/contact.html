@@ -1,1 +1,115 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Contact</title><link rel="stylesheet" href="/style.css"/></head><body><div class="container"><nav class="nav"><div class="brand"><div class="brand-logo">MB</div><div><div class="brand-title">Mokgoba Biz Hub</div><div style="font-size:12px;color:rgba(255,255,255,0.6)">Ithemba Lokwakha Group</div></div></div><div class="nav-links"><a class="btn" href="/index.html">Home</a><a class="btn" href="/services.html">Services</a><a class="btn btn-neon" href="/chat.html">Chat</a></div></nav><section style="padding-top:40px"><h2 class="section-title">Contact & Enquiries</h2><div style="display:grid;grid-template-columns:1fr 420px;gap:20px"><div class="hero-card"><h3>Get in touch</h3><p style="color:rgba(255,255,255,0.6)">Phone: <a href="tel:0660627939">066 062 7939</a><br/>Email: <a href="mailto:bizhubmkg@gmail.com">bizhubmkg@gmail.com</a><br/>Address: Mokgoba Biz Hub, Benoni, Gauteng</p><h4>Quick actions</h4><div style="display:flex;gap:10px;margin-top:8px"><a class="btn btn-neon" href="https://wa.me/27660627939" target="_blank">WhatsApp Us</a><a class="btn" href="/files/Mokgoba_BizHub_Company_Profile.pdf" download>Download Biz Hub Profile</a></div></div><div class="hero-card"><h3>Send an enquiry / order</h3><form id="contactForm"><input name="name" placeholder="Your name" required style="width:100%;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:#fff;margin-bottom:8px"/><input name="phone" placeholder="Phone / WhatsApp" required style="width:100%;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:#fff;margin-bottom:8px"/><select name="service" style="width:100%;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:#fff;margin-bottom:8px"><option>Printing & Design</option><option>IT & Repairs</option><option>Construction</option><option>Payroll & Services</option></select><textarea name="notes" placeholder="Notes / pickup time" style="width:100%;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.03);color:#fff;margin-bottom:8px"></textarea><button class="btn btn-neon" type="submit">Send Enquiry</button></form><div id="result" style="margin-top:8px;color:rgba(255,255,255,0.6)"></div></div></div></section><script>document.getElementById('contactForm').addEventListener('submit',async function(e){e.preventDefault();const f=new FormData(e.target);const payload={customerName:f.get('name'),customerPhone:f.get('phone'),serviceTitle:f.get('service'),notes:f.get('notes')};try{const r=await fetch('/api/order',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const j=await r.json();if(j&&j.success)document.getElementById('result').innerText='Enquiry sent — we will contact you on WhatsApp.';else document.getElementById('result').innerText='Error sending — try WhatsApp.'}catch(err){document.getElementById('result').innerText='Network error — try WhatsApp.'}});</script></div></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Contact — Mokgoba Biz Hub</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="brand">
+        <div class="brand-logo">MB</div>
+        <div>
+          <div class="brand-title">Mokgoba Biz Hub</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.6)">Ithemba Lokwakha Group</div>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a class="btn" href="/index.html">Home</a>
+        <a class="btn" href="/services.html">Services</a>
+        <a class="btn btn-neon" href="/chat.html">Chat</a>
+      </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section style="padding-top:40px">
+      <h2 class="section-title">Contact & Enquiries</h2>
+      <div style="display:grid;grid-template-columns:1fr 420px;gap:20px">
+
+        <!-- Info Card -->
+        <div class="hero-card">
+          <h3>Get in touch</h3>
+          <p style="color:rgba(255,255,255,0.6)">
+            📞 Phone: <a href="tel:0660627939">066 062 7939</a><br/>
+            💬 WhatsApp: <a href="https://wa.me/27660627939" target="_blank">Chat with us</a><br/>
+            ✉️ Email: <a href="mailto:bizhubmkg@gmail.com">bizhubmkg@gmail.com</a><br/>
+            📍 Address: Mokgoba Biz Hub,29132 Mhlongo Street,Mokgoba Ext 37,Etwatwa, Benoni, Gauteng, South Africa,1519
+          </p>
+          <h4>Quick actions</h4>
+          <div style="display:flex;gap:10px;margin-top:8px">
+            <a class="btn btn-neon" href="https://wa.me/27660627939" target="_blank">WhatsApp Us</a>
+            <a class="btn" href="/files/Mokgoba_BizHub_Company_Profile.pdf" download>Download Profile</a>
+          </div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="hero-card">
+          <h3>Send an enquiry</h3>
+          <form id="contactForm">
+            <input name="name" placeholder="Your name" required 
+              style="width:100%;padding:10px;border-radius:8px;background:transparent;
+              border:1px solid rgba(255,255,255,0.03);color:#fff;margin-bottom:8px"/>
+            
+            <input name="phone" placeholder="Phone / WhatsApp" required 
+              style="width:100%;padding:10px;border-radius:8px;background:transparent;
+              border:1px solid rgba(255,255,255,0.03);color:#fff;margin-bottom:8px"/>
+            
+            <select name="service" 
+              style="width:100%;padding:10px;border-radius:8px;background:transparent;
+              border:1px solid rgba(255,255,255,0.03);color:#fff;margin-bottom:8px">
+              <option>Printing & Design</option>
+              <option>IT & Repairs</option>
+              <option>Construction</option>
+              <option>Payroll & Services</option>
+            </select>
+
+            <textarea name="notes" placeholder="Notes / pickup time" 
+              style="width:100%;padding:10px;border-radius:8px;background:transparent;
+              border:1px solid rgba(255,255,255,0.03);color:#fff;margin-bottom:8px"
+              rows="4"></textarea>
+
+            <button class="btn btn-neon" type="submit">Send Enquiry</button>
+          </form>
+          <div id="result" style="margin-top:8px;color:rgba(255,255,255,0.6)"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">© 2025 Mokgoba Biz Hub • Ithemba Lokwakha Group • Reg: 2025/456824/07</div>
+  </div>
+
+  <!-- WhatsApp-enabled Form Script -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const f = new FormData(e.target);
+      const payload = {
+        customerName: f.get('name'),
+        customerPhone: f.get('phone'),
+        serviceTitle: f.get('service'),
+        notes: f.get('notes')
+      };
+      document.getElementById('result').innerText = 'Sending...';
+      try {
+        const r = await fetch('/api/order', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const j = await r.json();
+        if (j && j.success && j.whatsappUrl) {
+          document.getElementById('result').innerText = 'Opening WhatsApp...';
+          window.open(j.whatsappUrl, '_blank');
+        } else {
+          document.getElementById('result').innerText = 'Error sending — try WhatsApp.';
+        }
+      } catch (err) {
+        document.getElementById('result').innerText = 'Network error — try WhatsApp.';
+      }
+    });
+  </script>
+</body>
+</html>
